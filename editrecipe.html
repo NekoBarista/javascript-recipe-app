@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css" class="style">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Add/Edit Recipe</title>
+</head>
+<body>
+    <header class="header">
+       <a href="index.html" <h1>Recipe App</h1> </a> <a href="./shoppinglist.html" class="title-2">Shopping List</a>
+        <a href="./mealplan.html" class="title-3">Meal Plan</a>
+        <div id="recipes"></div>
+    </header>
+<div class="container">
+<input type="text" class="text title-input" id="recipe-title" name="recipe-title" placeholder="Recipe Name"> </input>
+<label class="checkbox">
+    <input type="checkbox" id="to-plan"> Add to Meal Plan
+</label>
+ 
+
+<textarea name="recipe-steps" id="recipe-steps" placeholder="Step 1....Step Two....." class="body-input"></textarea>
+
+Ingredients (check to add to your shopping list): <ul id="ingredient-list"></ul>
+
+    <form id="ingredients-list">
+    <input type="text"  class="input" placeholder="Add an ingredient" name="text" id="ingredientInput">
+    
+    <button class="button">Add Ingredient</button>
+</form>
+
+<button id="delete" class="button button--secondary">Delete Recipe</button>  <button id="save" class="button">Save & Home</button>
+
+<button id="random" class="button-green">Random Recipe</button>
+</div>
+
+<script src="/scripts/uuid.js"> </script>
+ <script src="./scripts/recipe-functions.js"></script>
+<script src="./scripts/edit.js"></script>
+
+</body>
+</html>
