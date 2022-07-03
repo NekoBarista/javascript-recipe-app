@@ -227,10 +227,10 @@ const handleRandomClick = () => {
     }
 
     saveIngredient(ingredients)
-
     renderIngredients(ingredients)
   
-   
+    let id =uuidv4()
+
     
     axios.get('https://api.spoonacular.com/recipes/random?apiKey=e095ef0c64034f35a9211eb6a39f4772'
     ).then(function (response)
@@ -238,8 +238,7 @@ const handleRandomClick = () => {
 
        let newTitle = response.data.recipes[0].title
        let newBody = response.data.recipes[0].instructions
-       let id =uuidv4()
-
+     
         recipeTitle.value = response.data.recipes[0].title
         recipeBody.value = response.data.recipes[0].instructions
 
@@ -262,7 +261,6 @@ const handleRandomClick = () => {
              
         })
 
-   
 
         saveRecipe(recipes)
         saveIngredient(ingredients)
@@ -273,8 +271,5 @@ const handleRandomClick = () => {
    
 
 }
-
-
-
 
 randomButton.addEventListener('click', handleRandomClick)
