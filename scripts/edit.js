@@ -11,16 +11,16 @@ let plan = document.querySelector('#to-plan')
 const randomButton = document.querySelector('#random')
 
 
-plan.checked = recipe.mealPlan
-recipeBody.value = recipe.Body
-recipeTitle.value= recipe.Title
+// plan.checked = recipe.mealPlan
+// recipeBody.value = recipe.Body
+// recipeTitle.value= recipe.Title
 
-plan.addEventListener('change', (e) => {
-    recipe.mealPlan = e.target.checked
-    saveRecipe(recipes)
+// plan.addEventListener('change', (e) => {
+//     recipe.mealPlan = e.target.checked
+//     saveRecipe(recipes)
    
  
-})
+// })
 
 // 'save' button function
 savebutton = document.querySelector('#save')
@@ -207,7 +207,7 @@ window.addEventListener('storage', (e) =>{
 
         recipeTitle.value = recipe.Title
         recipeBody.value = recipe.Body
-        mealPlan.checked = recipe.mealPlan
+        // mealPlan.checked = recipe.mealPlan
     }
 })
 
@@ -248,14 +248,9 @@ const handleRandomClick = () => {
     ).then(function (response)
     {
 
-       let newTitle = response.data.recipes[0].title
-       let newBody = response.data.recipes[0].instructions
-     
         recipeTitle.value = response.data.recipes[0].title
-        recipeBody.value = response.data.recipes[0].instructions
-
-        recipe.Title = response.data.recipes[0].title
-        recipe.Body = response.data.recipes[0].instructions
+        recipeBody.value =  response.data.recipes[0].instructions.replace('<li>', '').replace('<ol>' ,'').replace('<b>','').replace('<ul>', '').replace('<st>','').replace('</st>','').replace('</b>','').replace('</ol>', '').replace('</li>', '').replace('</ul>', '')
+     
       
     
 
