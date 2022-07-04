@@ -231,7 +231,6 @@ const handleRandomClick = () => {
         
         ingredients.splice(ingredientIndex, 1)
 
-        console.log(ingredientIndex)
     })
 
    } 
