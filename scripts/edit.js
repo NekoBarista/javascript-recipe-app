@@ -216,15 +216,27 @@ window.addEventListener('storage', (e) =>{
 // random recipe
 
 
-
-
 const handleRandomClick = () => {
-    let ingredientIndex = ingredients.findIndex((ingredient) => ingredient.recipe === recipeId
-    )
-  
-    if (ingredientIndex > -1) {
+
+    let newarray = ingredients.filter((ingredient) => ingredient.recipe ===  recipeId)
+
+    if (newarray) {
+
+
+   newarray.forEach((ingredient)=>{
+
+   
+        let ingredientIndex = ingredients.findIndex((ingredient) => ingredient.recipe === recipeId)
+
+        
         ingredients.splice(ingredientIndex, 1)
-    }
+
+        console.log(ingredientIndex)
+    })
+
+   } 
+
+
 
     saveIngredient(ingredients)
     renderIngredients(ingredients)
