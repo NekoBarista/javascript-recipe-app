@@ -247,6 +247,7 @@ const handleRandomClick = () => {
     ).then(function (response)
     {
 
+     
         recipeTitle.value = response.data.recipes[0].title
         recipe.Title = response.data.recipes[0].title
         recipeBody.value =  response.data.recipes[0].instructions.replaceAll('<li>', ' ').replaceAll('<ol>' ,' ').replaceAll('<b>',' ').replaceAll('<ul>', ' ').replaceAll('<st>',' ').replaceAll('</st>',' ').replaceAll('</b>',' ').replaceAll('</ol>', ' ').replaceAll('</li>', ' ').replaceAll('</ul>', ' ').replaceAll('<br>', ' ').replaceAll('&amp; ', '&').replaceAll('</br>', ' ').trim()
@@ -271,8 +272,8 @@ const handleRandomClick = () => {
         saveRecipe(recipes)
         saveIngredient(ingredients)
         renderIngredients(ingredients)
-    }
-    )
+    } 
+    ) 
 
    
 
