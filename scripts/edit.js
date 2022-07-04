@@ -11,16 +11,16 @@ let plan = document.querySelector('#to-plan')
 const randomButton = document.querySelector('#random')
 
 
-// plan.checked = recipe.mealPlan
-// recipeBody.value = recipe.Body
-// recipeTitle.value= recipe.Title
+plan.checked = recipe.mealPlan
+recipeBody.value = recipe.Body
+recipeTitle.value= recipe.Title
 
-// plan.addEventListener('change', (e) => {
-//     recipe.mealPlan = e.target.checked
-//     saveRecipe(recipes)
+plan.addEventListener('change', (e) => {
+    recipe.mealPlan = e.target.checked
+    saveRecipe(recipes)
    
  
-// })
+})
 
 // 'save' button function
 savebutton = document.querySelector('#save')
@@ -207,7 +207,7 @@ window.addEventListener('storage', (e) =>{
 
         recipeTitle.value = recipe.Title
         recipeBody.value = recipe.Body
-        // mealPlan.checked = recipe.mealPlan
+        mealPlan.checked = recipe.mealPlan
     }
 })
 
