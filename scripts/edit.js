@@ -250,7 +250,7 @@ const handleRandomClick = () => {
         recipeTitle.value = response.data.recipes[0].title
         recipe.Title = response.data.recipes[0].title
         recipeBody.value =  response.data.recipes[0].instructions.trim().replaceAll('<li>', ' ').replaceAll('<ol>' ,' ').replaceAll('<b>',' ').replaceAll('<ul>', ' ').replaceAll('<st>',' ').replaceAll('</st>',' ').replaceAll('</b>',' ').replaceAll('</ol>', ' ').replaceAll('</li>', ' ').replaceAll('</ul>', ' ').replaceAll('<br>', ' ').replaceAll('</br>', ' ')
-        recipe.Body = response.data.recipes[0].instructions.replaceAll('<li>', ' ').replaceAll('<ol>' ,' ').replaceAll('<b>',' ').replaceAll('<ul>', ' ').replaceAll('<st>',' ').replaceAll('</st>',' ').replaceAll('</b>',' ').replaceAll('</ol>', ' ').replaceAll('</li>', ' ').replaceAll('</ul>', ' ').replaceAll('<br>', ' ').replaceAll('</br>', ' ').trim()
+        recipe.Body = response.data.recipes[0].instructions.replaceAll('<li>', ' ').replaceAll('<ol>' ,' ').replaceAll('<b>',' ').replaceAll('<ul>', ' ').replaceAll('<st>',' ').replaceAll('</st>',' ').replaceAll('</b>',' ').replaceAll('</ol>', ' ').replaceAll('</li>', ' ').replaceAll('</ul>', ' ').replaceAll('<br>', ' ').replaceAll('</br>', ' ').replaceAll('&amp; ', '&').trim()
 
         saveRecipe(recipes)
 
