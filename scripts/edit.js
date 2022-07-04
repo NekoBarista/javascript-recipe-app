@@ -248,7 +248,7 @@ const handleRandomClick = () => {
     {
 
         recipeTitle.value = response.data.recipes[0].title
-        recipeBody.value =  response.data.recipes[0].instructions.replaceAll('<li>', ' ').replaceAll('<ol>' ,' ').replaceAll('<b>',' ').replaceAll('<ul>', ' ').replaceAll('<st>',' ').replaceAll('</st>',' ').replaceAll('</b>',' ').replaceAll('</ol>', ' ').replaceAll('</li>', ' ').replaceAll('</ul>', ' ')
+        recipeBody.value =  response.data.recipes[0].instructions.replaceAll('<li>', ' ').replaceAll('<ol>' ,' ').replaceAll('<b>',' ').replaceAll('<ul>', ' ').replaceAll('<st>',' ').replaceAll('</st>',' ').replaceAll('</b>',' ').replaceAll('</ol>', ' ').replaceAll('</li>', ' ').replaceAll('</ul>', ' ').replaceAll('<br>', ' ').replaceAll('</br>', ' ')
      
       
     
