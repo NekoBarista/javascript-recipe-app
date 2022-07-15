@@ -266,13 +266,15 @@ const handleRandomClick = () => {
                 
                 })
              
+        }).catch(()=>{
+            alert("Too many random recipe requests today, try again tomorrow")
         })
 
 
         saveRecipe(recipes)
         saveIngredient(ingredients)
         renderIngredients(ingredients)
-    } 
+    }
     ) 
 
    
@@ -280,3 +282,5 @@ const handleRandomClick = () => {
 }
 
 randomButton.addEventListener('click', handleRandomClick)
+
+
