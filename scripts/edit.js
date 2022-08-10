@@ -266,7 +266,7 @@ const handleRandomClick = () => {
                 
                 })
              
-        }).catch(()=>{
+        }).catch(function (error) {
             alert("Too many random recipe requests today, try again tomorrow")
         })
 
